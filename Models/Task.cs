@@ -1,7 +1,6 @@
 namespace projectEF.Models;
 
-public class Task
-{
+public class Task {
     public Guid IdTask { get; set; }
     public Guid IdCategory { get; set; }
     public string Title { get; set; } = string.Empty;
