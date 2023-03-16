@@ -5,21 +5,21 @@ namespace projectEF.Models;
 
 [Table("Task")]
 public class Task {
-    [Key]
+    //[Key]
     public Guid IdTask { get; set; }
 
     [ForeignKey("IdCategory")]
     public Guid IdCategory { get; set; }
 
-    [Required]
-    [MaxLength(200)]
+    //[Required]
+    //[MaxLength(200)]
     [MinLength(10)]
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public Priority Priority { get; set; }
     public DateTime DateCreate { get; set; }
 
-    [NotMapped]
+    //[NotMapped]
     public string Resume { get; set; } = string.Empty;
 
     public virtual Category Category { get; set; } = new Category();
