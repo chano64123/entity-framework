@@ -18,6 +18,7 @@ public class Task {
     public string Description { get; set; } = string.Empty;
     public Priority Priority { get; set; }
     public DateTime DateCreate { get; set; }
+    public DateTime? CulminationDate { get; set; }
 
     //[NotMapped]
     public string Resume { get; set; } = string.Empty;

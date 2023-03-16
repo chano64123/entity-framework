@@ -29,6 +29,7 @@ public class TasksContext : DbContext {
             task.Property(p => p.Description);
             task.Property(p => p.Priority);
             task.Property(p => p.DateCreate);
+            task.Property(p => p.CulminationDate).IsRequired(false);
             task.Ignore(p => p.Resume);
         });
     }
