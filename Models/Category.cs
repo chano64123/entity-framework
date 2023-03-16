@@ -13,6 +13,7 @@ public class Category {
     [MinLength(5)]
     public string Name { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
+    public int Impact { get; set; }
 
     public virtual ICollection<Task> Tasks { get; set; } = new List<Task>();
 }
