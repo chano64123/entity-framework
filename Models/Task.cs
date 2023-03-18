@@ -17,13 +17,13 @@ public class Task {
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public Priority Priority { get; set; }
-    public DateTime DateCreate { get; set; }
+    public DateTime CreationDate { get; set; }
     public DateTime? CulminationDate { get; set; }
 
     //[NotMapped]
     public string Resume { get; set; } = string.Empty;
 
-    public virtual Category Category { get; set; } = new Category();
+    public virtual Category Category { get; set; }
 }
 
 public enum Priority {

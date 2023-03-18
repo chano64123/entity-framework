@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace projectEF.Models;
 
@@ -15,5 +16,6 @@ public class Category {
     public string Description { get; set; } = string.Empty;
     public int Impact { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<Task> Tasks { get; set; } = new List<Task>();
 }

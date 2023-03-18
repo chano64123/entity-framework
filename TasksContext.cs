@@ -5,8 +5,8 @@ using Task = projectEF.Models.Task;
 namespace projectEF;
 
 public class TasksContext : DbContext {
-    DbSet<Category> Categories { get; set; }
-    DbSet<Task> Tasks { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Task> Tasks { get; set; }
 
     public TasksContext(DbContextOptions<TasksContext> options) : base(options) {}
 
@@ -47,21 +47,21 @@ public class TasksContext : DbContext {
                 IdCategory = Guid.Parse("bb400eef-eb06-4eed-90ac-cae351c8e3e5"),
                 Title = "Pago de Servicios Publicos",
                 Priority = Priority.Medium,
-                DateCreate = DateTime.Now,
+                CreationDate = DateTime.Now,
             },
             new Task(){
                 IdTask = Guid.Parse("55d8ca55-2764-4ecf-b15b-e17ed218dd7e"),
                 IdCategory = Guid.Parse("d8682463-0c22-4356-960c-2a25d3a961ac"),
                 Title = "Terminar de ver pelicula en Netflix",
                 Priority = Priority.Low,
-                DateCreate = DateTime.Now,
+                CreationDate = DateTime.Now,
             },
             new Task(){
                 IdTask = Guid.Parse("c20458e1-beeb-42f5-83d1-b5e12bb487b3"),
                 IdCategory = Guid.Parse("785f1edd-0a8f-4384-9f21-9d210692e685"),
                 Title = "Pichanga del Viernes",
                 Priority = Priority.Hight,
-                DateCreate = DateTime.Now,
+                CreationDate = DateTime.Now,
             }
         };
         modelBuilder.Entity<Task>(task => {
@@ -72,7 +72,7 @@ public class TasksContext : DbContext {
             task.Property(p => p.Title).IsRequired().HasMaxLength(200);
             task.Property(p => p.Description).IsRequired(false);
             task.Property(p => p.Priority);
-            task.Property(p => p.DateCreate);
+            task.Property(p => p.CreationDate);
             task.Property(p => p.CulminationDate).IsRequired(false);
             task.Ignore(p => p.Resume);
 
