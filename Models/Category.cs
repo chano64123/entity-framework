@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectEF.Models;
 
-[Table("Category")]
+//[Table("Category")]
 public class Category {
     //[Key]
     public Guid IdCategory { get; set; }

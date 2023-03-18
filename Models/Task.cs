@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectEF.Models;
 
-[Table("Task")]
+//[Table("Task")]
 public class Task {
     //[Key]
     public Guid IdTask { get; set; }
 
-    [ForeignKey("IdCategory")]
+    //[ForeignKey("IdCategory")]
     public Guid IdCategory { get; set; }
 
     //[Required]
